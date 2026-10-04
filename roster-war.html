@@ -29,7 +29,7 @@ body{background:#030303;color:#f4f4f5}
     </a>
     <nav class="hidden lg:flex items-center gap-1 font-oswald text-sm tracking-wide">
       <a href="index.html" class="px-3 py-2 text-zinc-400 hover:text-white transition-colors">ACCUEIL</a>
-      <a href="war.html" class="px-3 py-2 text-zinc-400 hover:text-white transition-colors">WAR 🔴</a>
+      <a href="war.html" class="px-3 py-2 text-zinc-400 hover:text-red-500 transition-colors">WAR 🔴</a>
       <a href="nitro.html" class="px-3 py-2 text-zinc-400 hover:text-blue-400 transition-colors">NITRO 🔵</a>
       <a href="ple.html" class="px-3 py-2 text-zinc-400 hover:text-yellow-400 transition-colors">PLE</a>
       <a href="roster-war.html" class="px-3 py-2 text-white bg-zinc-900 border-b-2 border-red-600">ROSTER WAR</a>
@@ -38,16 +38,16 @@ body{background:#030303;color:#f4f4f5}
       <a href="apropos.html" class="px-3 py-2 text-zinc-400 hover:text-white transition-colors">À PROPOS</a>
     </nav>
     <div class="flex items-center gap-2">
-      <a href="https://discord.gg/z35dSZUVTW" target="_blank" class="hidden md:inline-flex bg-yellow-400 hover:bg-yellow-300 text-black px-5 py-2 font-oswald text-xs font-bold clip-btn transition-transform hover:scale-105 shadow-[0_0_20px_rgba(250,204,21,0.3)]">DISCORD</a>
+      <a href="https://discord.gg/vY8WJQcwPN" target="_blank" class="hidden md:inline-flex bg-yellow-400 hover:bg-yellow-300 text-black px-5 py-2 font-oswald text-xs font-bold clip-btn transition-transform hover:scale-105 shadow-[0_0_20px_rgba(250,204,21,0.3)]">DISCORD</a>
       <button id="mobileBtn" class="lg:hidden ml-2 w-9 h-9 bg-zinc-800 text-white flex items-center justify-center clip-btn">≡</button>
     </div>
   </div>
   <div id="mobileMenu" class="lg:hidden hidden border-t border-zinc-800 bg-black p-4 grid grid-cols-2 gap-2 font-oswald text-sm">
     <a href="index.html" class="p-3 bg-zinc-900 text-center">ACCUEIL</a>
-    <a href="war.html" class="p-3 bg-zinc-900 text-center">WAR 🔴</a>
+    <a href="war.html" class="p-3 bg-zinc-900 text-center text-red-500">WAR 🔴</a>
     <a href="nitro.html" class="p-3 bg-zinc-900 text-center text-blue-400">NITRO 🔵</a>
     <a href="ple.html" class="p-3 bg-zinc-900 text-center text-yellow-400">PLE</a>
-    <a href="roster-war.html" class="p-3 bg-zinc-900 text-center text-red-500">ROSTER WAR</a>
+    <a href="roster-war.html" class="p-3 bg-zinc-900 text-center text-white bg-zinc-800 border-l-2 border-red-600">ROSTER WAR</a>
     <a href="roster-nitro.html" class="p-3 bg-zinc-900 text-center">ROSTER NITRO</a>
     <a href="champions.html" class="p-3 bg-zinc-900 text-center">CHAMPIONS</a>
     <a href="apropos.html" class="p-3 bg-zinc-900 text-center">À PROPOS</a>
@@ -58,16 +58,13 @@ document.getElementById('mobileBtn')?.addEventListener('click',function(){docume
 </script>
 
 <main class='max-w-7xl mx-auto px-4 py-12 relative'>
-  <!-- Halo rouge immersif d'arrière-plan -->
   <div class="absolute top-0 right-10 w-[500px] h-[500px] bg-red-600/10 blur-[140px] rounded-full pointer-events-none"></div>
 
-  <!-- Titre et Infos -->
   <div class="border-l-4 border-red-600 pl-6 py-4 mb-8 bg-gradient-to-r from-red-950/20 to-transparent clip-diagonal">
     <h1 class='font-anton text-5xl md:text-6xl text-white tracking-tight'>ROSTER WAR - 109</h1>
     <div class='font-oswald text-zinc-400 mt-1 text-sm tracking-widest uppercase'>GM JAVIER FUENTES & NICO • MERCREDI 19H LIVE</div>
   </div>
 
-  <!-- Barre de recherche et filtres -->
   <div class="flex flex-wrap gap-3 mb-8 items-center bg-zinc-900/60 border border-zinc-800 p-4 clip-diagonal">
     <input id="search" placeholder="Rechercher un catcheur..." class="bg-black border border-zinc-700 text-white placeholder-zinc-500 px-4 py-2.5 w-full md:w-72 font-oswald text-sm focus:outline-none focus:border-red-600 transition-colors">
     <div class="flex gap-2">
@@ -77,9 +74,8 @@ document.getElementById('mobileBtn')?.addEventListener('click',function(){docume
     </div>
   </div>
 
-  <!-- Grille du Roster -->
   <div id="rosterGrid" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
-    <!-- Cartes 85+ (Intégralité de la source d'origine) -->
+    <!-- Cartes 85+ -->
     <div class="roster-card bg-zinc-900/90 border border-zinc-800 hover:border-red-600/60 p-4 transition-all clip-diagonal group" data-name="ABYSS" data-gen="85+"><div class="font-oswald text-sm tracking-wide text-white group-hover:text-red-400 truncate">ABYSS</div><div class="text-[10px] mt-2"><span class="px-2 py-0.5 bg-red-950/80 text-red-400 border border-red-900/50 font-oswald">85+</span></div></div>
     <div class="roster-card bg-zinc-900/90 border border-zinc-800 hover:border-red-600/60 p-4 transition-all clip-diagonal group" data-name="AFA" data-gen="85+"><div class="font-oswald text-sm tracking-wide text-white group-hover:text-red-400 truncate">AFA</div><div class="text-[10px] mt-2"><span class="px-2 py-0.5 bg-red-950/80 text-red-400 border border-red-900/50 font-oswald">85+</span></div></div>
     <div class="roster-card bg-zinc-900/90 border border-zinc-800 hover:border-red-600/60 p-4 transition-all clip-diagonal group" data-name="ALUNDRA BLAYZE" data-gen="85+"><div class="font-oswald text-sm tracking-wide text-white group-hover:text-red-400 truncate">ALUNDRA BLAYZE</div><div class="text-[10px] mt-2"><span class="px-2 py-0.5 bg-red-950/80 text-red-400 border border-red-900/50 font-oswald">85+</span></div></div>
@@ -142,7 +138,7 @@ document.getElementById('mobileBtn')?.addEventListener('click',function(){docume
     <div class="roster-card bg-zinc-900/90 border border-zinc-800 hover:border-red-600/60 p-4 transition-all clip-diagonal group" data-name="UMAGA" data-gen="85+"><div class="font-oswald text-sm tracking-wide text-white group-hover:text-red-400 truncate">UMAGA</div><div class="text-[10px] mt-2"><span class="px-2 py-0.5 bg-red-950/80 text-red-400 border border-red-900/50 font-oswald">85+</span></div></div>
     <div class="roster-card bg-zinc-900/90 border border-zinc-800 hover:border-red-600/60 p-4 transition-all clip-diagonal group" data-name="VICTORIA" data-gen="85+"><div class="font-oswald text-sm tracking-wide text-white group-hover:text-red-400 truncate">VICTORIA</div><div class="text-[10px] mt-2"><span class="px-2 py-0.5 bg-red-950/80 text-red-400 border border-red-900/50 font-oswald">85+</span></div></div>
 
-    <!-- Cartes 84 MAX (Intégralité de la source d'origine) -->
+    <!-- Cartes 84 MAX -->
     <div class="roster-card bg-zinc-900/90 border border-zinc-800 hover:border-red-600/60 p-4 transition-all clip-diagonal group" data-name="ALEISTER BLACK" data-gen="84MAX"><div class="font-oswald text-sm tracking-wide text-white group-hover:text-red-400 truncate">ALEISTER BLACK</div><div class="text-[10px] mt-2"><span class="px-2 py-0.5 bg-zinc-800 text-zinc-400 font-oswald">84MAX</span></div></div>
     <div class="roster-card bg-zinc-900/90 border border-zinc-800 hover:border-red-600/60 p-4 transition-all clip-diagonal group" data-name="ALEX SHELLEY" data-gen="84MAX"><div class="font-oswald text-sm tracking-wide text-white group-hover:text-red-400 truncate">ALEX SHELLEY</div><div class="text-[10px] mt-2"><span class="px-2 py-0.5 bg-zinc-800 text-zinc-400 font-oswald">84MAX</span></div></div>
     <div class="roster-card bg-zinc-900/90 border border-zinc-800 hover:border-red-600/60 p-4 transition-all clip-diagonal group" data-name="AXIOM" data-gen="84MAX"><div class="font-oswald text-sm tracking-wide text-white group-hover:text-red-400 truncate">AXIOM</div><div class="text-[10px] mt-2"><span class="px-2 py-0.5 bg-zinc-800 text-zinc-400 font-oswald">84MAX</span></div></div>
