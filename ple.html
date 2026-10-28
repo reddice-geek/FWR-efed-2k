@@ -16,42 +16,60 @@ body{background:#080808;color:#e5e5e5}
 </head>
 <body class='font-inter min-h-screen'>
 
-<header class="sticky top-0 z-50 bg-black/90 backdrop-blur border-b border-zinc-800">
-  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-    <a href="index.html" class="flex items-center gap-3">
-      <div class="w-10 h-10 bg-white text-black font-anton flex items-center justify-center text-xl clip-bevel">FWR</div>
-      <div class="leading-none"><div class="font-anton text-lg tracking-wider">FWR</div><div class="font-oswald text-[10px] text-zinc-400 tracking-[0.2em]">FRENCH WRESTLING RÉVOLUTION</div></div>
-    </a>
-    <nav class="hidden lg:flex items-center gap-1 font-oswald text-sm">
-      <a href="index.html" class="px-3 py-2 text-zinc-400 hover:text-white">ACCUEIL</a>
-      <a href="war.html" class="px-3 py-2 text-zinc-400 hover:text-white">WEDNESDAY IS WAR</a>
-      <a href="nitro.html" class="px-3 py-2 text-zinc-400 hover:text-white">SUNDAY NIGHT NITRO</a>
-      <a href="ple.html" class="px-3 py-2 text-white bg-zinc-900">PLE</a>
-      <a href="roster-war.html" class="px-3 py-2 text-zinc-400 hover:text-white">ROSTER WAR</a>
-      <a href="roster-nitro.html" class="px-3 py-2 text-zinc-400 hover:text-white">ROSTER NITRO</a>
-      <a href="champions.html" class="px-3 py-2 text-zinc-400 hover:text-white">CHAMPIONS</a>
-      <a href="apropos.html" class="px-3 py-2 text-zinc-400 hover:text-white">A PROPOS</a>
-    </nav>
-    <div class="flex items-center gap-2">
-      <a href="https://discord.gg/vY8WJQcwPN" target="_blank" class="hidden md:inline-flex bg-[#5865F2] hover:bg-[#4752c4] text-white px-4 py-2 font-oswald text-xs clip-bevel">DISCORD</a>
-      <a href="https://www.twitch.tv/upsilon7" target="_blank" class="bg-[#9146FF] hover:bg-[#7a3ad6] text-white px-4 py-2 font-oswald text-xs clip-bevel">TWITCH 19H</a>
-      <button id="mobileBtn" class="lg:hidden ml-2 w-8 h-8 bg-zinc-800 flex items-center justify-center">≡</button>
+<header class="fwr-header sticky top-0 z-50">
+  <div class="fwr-header-top">
+    <div class="fwr-brand-wrap">
+      <a href="index.html" class="fwr-brand" aria-label="FWR accueil">
+        <span class="fwr-logo">FWR</span>
+        <span class="fwr-brand-text"><strong>FWR</strong><small>FRENCH WRESTLING RÉVOLUTION</small></span>
+      </a>
+      <div class="fwr-quick-links">
+        <a href="https://discord.gg/vY8WJQcwPN" target="_blank" rel="noopener noreferrer" class="fwr-social discord">DISCORD</a>
+        <a href="https://www.twitch.tv/upsilon7" target="_blank" rel="noopener noreferrer" class="fwr-social twitch">TWITCH <span>19H</span></a>
+        <button id="mobileBtn" class="fwr-mobile-btn" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+      </div>
     </div>
   </div>
-  <div id="mobileMenu" class="lg:hidden hidden border-t border-zinc-800 bg-black p-4 grid grid-cols-2 gap-2 font-oswald text-sm">
-    <a href="index.html" class="p-3 bg-zinc-900">ACCUEIL</a>
-    <a href="war.html" class="p-3 bg-zinc-900">WEDNESDAY IS WAR</a>
-    <a href="nitro.html" class="p-3 bg-zinc-900">SUNDAY NIGHT NITRO</a>
-    <a href="ple.html" class="p-3 bg-zinc-900">PLE</a>
-    <a href="roster-war.html" class="p-3 bg-zinc-900">ROSTER WAR</a>
-    <a href="roster-nitro.html" class="p-3 bg-zinc-900">ROSTER NITRO</a>
-    <a href="champions.html" class="p-3 bg-zinc-900">CHAMPIONS</a>
-    <a href="apropos.html" class="p-3 bg-zinc-900">A PROPOS</a>
+  <div class="fwr-nav-band">
+    <nav class="fwr-nav" aria-label="Navigation principale">
+      <a href="index.html" class="nav-link">ACCUEIL</a><a href="war.html" class="nav-link">WEDNESDAY IS WAR</a><a href="nitro.html" class="nav-link">SUNDAY NIGHT NITRO</a><a href="ple.html" class="nav-link nav-active" aria-current="page">PLE</a><a href="roster-war.html" class="nav-link">ROSTER WAR</a><a href="roster-nitro.html" class="nav-link">ROSTER NITRO</a><a href="champions.html" class="nav-link">CHAMPIONS</a><a href="apropos.html" class="nav-link">À PROPOS</a>
+    </nav>
   </div>
+  <nav id="mobileMenu" class="fwr-mobile-menu" aria-label="Navigation mobile">
+    <a href="index.html" class="mobile-link">ACCUEIL</a><a href="war.html" class="mobile-link">WEDNESDAY IS WAR</a><a href="nitro.html" class="mobile-link">SUNDAY NIGHT NITRO</a><a href="ple.html" class="mobile-link nav-active" aria-current="page">PLE</a><a href="roster-war.html" class="mobile-link">ROSTER WAR</a><a href="roster-nitro.html" class="mobile-link">ROSTER NITRO</a><a href="champions.html" class="mobile-link">CHAMPIONS</a><a href="apropos.html" class="mobile-link">À PROPOS</a>
+  </nav>
 </header>
-<script>
-document.getElementById('mobileBtn')?.addEventListener('click',function(){document.getElementById('mobileMenu').classList.toggle('hidden')});
-</script>
+<style>
+.fwr-header{background:rgba(5,5,5,.97);border-bottom:1px solid #343434;box-shadow:0 8px 30px rgba(0,0,0,.4);backdrop-filter:blur(12px);color:#fff}
+.fwr-header-top{max-width:1440px;margin:0 auto;padding:14px 28px 12px}
+.fwr-brand-wrap{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.fwr-brand{display:flex;align-items:center;gap:13px;text-decoration:none;color:#fff;min-width:0}
+.fwr-logo{width:54px;height:48px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#ff3434,#a60000);color:#fff;font-family:'Anton',sans-serif;font-size:24px;font-style:italic;letter-spacing:-1px;clip-path:polygon(9px 0,100% 0,calc(100% - 9px) 100%,0 100%);box-shadow:0 0 22px rgba(220,20,20,.2)}
+.fwr-brand-text{display:flex;flex-direction:column;line-height:1}
+.fwr-brand-text strong{font-family:'Anton',sans-serif;font-size:25px;letter-spacing:2px}
+.fwr-brand-text small{font-family:'Oswald',sans-serif;color:#aaa;font-size:9px;letter-spacing:2px;margin-top:5px}
+.fwr-quick-links{display:flex;align-items:center;gap:10px}
+.fwr-social{font-family:'Oswald',sans-serif;font-size:12px;font-weight:700;letter-spacing:1px;padding:10px 17px;text-decoration:none;clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%);transition:filter .2s,transform .2s}
+.fwr-social:hover{filter:brightness(1.2);transform:translateY(-1px)}
+.fwr-social.discord{background:#5865f2;color:#fff}
+.fwr-social.twitch{background:#9146ff;color:#fff}
+.fwr-social span{opacity:.8;margin-left:3px}
+.fwr-nav-band{border-top:1px solid #202020;background:linear-gradient(90deg,#111 0%,#1a1a1a 50%,#111 100%)}
+.fwr-nav{max-width:1440px;margin:0 auto;padding:0 20px;display:flex;align-items:stretch;justify-content:center;gap:5px}
+.nav-link{position:relative;display:flex;align-items:center;justify-content:center;min-height:48px;padding:0 17px;color:#aaa;text-decoration:none;font-family:'Oswald',sans-serif;font-size:12px;font-weight:700;letter-spacing:1px;white-space:nowrap;transition:background .2s,color .2s}
+.nav-link:hover{background:#292929;color:#fff}
+.nav-link:after{content:"";position:absolute;bottom:0;left:15px;right:15px;height:3px;background:#e32222;transform:scaleX(0);transition:transform .2s}
+.nav-link:hover:after,.nav-link.nav-active:after{transform:scaleX(1)}
+.nav-link.nav-active{color:#fff;background:linear-gradient(180deg,rgba(220,30,30,.15),rgba(220,30,30,.04))}
+.fwr-mobile-btn{display:none;background:#e32222;color:white;border:0;width:42px;height:40px;font-size:22px;cursor:pointer;clip-path:polygon(7px 0,100% 0,calc(100% - 7px) 100%,0 100%)}
+.fwr-mobile-menu{display:none}
+.mobile-link{display:flex;align-items:center;min-height:44px;padding:10px 13px;color:#bbb;background:#111;border:1px solid #292929;text-decoration:none;font-family:'Oswald',sans-serif;font-size:13px;font-weight:700;letter-spacing:.6px}
+.mobile-link:hover,.mobile-link.nav-active{color:#fff;background:#2a1010;border-color:#b91c1c}
+@media(max-width:1100px){.nav-link{padding:0 11px;font-size:11px}.fwr-nav{gap:2px}}
+@media(max-width:850px){.fwr-header-top{padding:12px 16px}.fwr-nav-band{display:none}.fwr-social{padding:9px 12px;font-size:11px}.fwr-mobile-btn{display:block}.fwr-mobile-menu{padding:12px;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;border-top:1px solid #333;background:#080808}.fwr-mobile-menu.is-open{display:grid}.fwr-brand-text small{letter-spacing:1px;font-size:8px}}
+@media(max-width:480px){.fwr-brand-wrap{gap:8px}.fwr-logo{width:43px;height:40px;font-size:20px}.fwr-brand{gap:8px}.fwr-brand-text strong{font-size:21px}.fwr-brand-text small{max-width:150px;font-size:7px}.fwr-quick-links{gap:6px}.fwr-social{padding:8px 9px;font-size:10px}.fwr-social.discord{display:none}.fwr-mobile-btn{width:38px;height:38px}}
+</style>
+
 
 <main class='max-w-7xl mx-auto px-4 py-8'>
   <h1 class="font-anton text-5xl text-[#ffcc00]">PLE - PREMIUM LIVE EVENTS</h1>
@@ -231,5 +249,19 @@ document.getElementById('mobileBtn')?.addEventListener('click',function(){docume
   <div class="text-center py-4 text-[10px] text-zinc-700 border-t border-zinc-900">© 2026 FWR - E-Fed PvP WWE 2K26[cite: 4]</div>
 </footer>
 
+<script>
+(function(){
+ const btn=document.getElementById('mobileBtn');
+ const menu=document.getElementById('mobileMenu');
+ if(btn&&menu){
+   btn.addEventListener('click',function(){
+     const open=menu.classList.toggle('is-open');
+     btn.setAttribute('aria-expanded',String(open));
+     btn.setAttribute('aria-label',open?'Fermer le menu':'Ouvrir le menu');
+     btn.textContent=open?'×':'☰';
+   });
+ }
+})();
+</script>
 </body>
 </html>
