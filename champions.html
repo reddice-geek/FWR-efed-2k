@@ -53,324 +53,128 @@ body{background:#080808;color:#e5e5e5}
 document.getElementById('mobileBtn')?.addEventListener('click',function(){document.getElementById('mobileMenu').classList.toggle('hidden')});
 </script>
 
-<main class='max-w-7xl mx-auto px-4 py-8'>
-  <h1 class="font-anton text-5xl text-[#ffcc00]">CHAMPIONS FWR</h1>
-  <div class="font-oswald text-zinc-400 mt-2">LISTE OFFICIELLE DES TITRES ET RÈGNES</div>
-  
-  <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-    <!-- FWR CHAMPION -->
-    <div class="bg-zinc-900 border border-zinc-800 p-5 clip-bevel flex flex-col justify-between">
-      <div>
-        <div class="font-oswald text-xs text-[#ffcc00] tracking-widest">TITRE MAJEUR</div>
-        <h3 class="font-anton text-2xl mt-1">FWR CHAMPION</h3>
-        <div class="mt-4 space-y-2 text-sm text-zinc-300">
-          <div class="flex justify-between items-center border-b border-zinc-800 pb-2">
-            <span>𝒦𝓎𝓀𝓈_𝒷𝒶𝓁ℴ𝓇 (Bronson Reed)</span>
-            <span class="text-xs text-zinc-500">1x (75 Jours)</span>
-          </div>
-          <div class="flex justify-between items-center bg-zinc-800/50 p-2 rounded">
-            <span><strong>Nico "Jefe"</strong> (Eazy-E)</span>
-            <span class="bg-[#ffcc00] text-black text-[10px] font-oswald px-2 py-0.5 clip-bevel">ACTUEL (62 Jours)</span>
-          </div>
-        </div>
-      </div>
+<main class="max-w-7xl mx-auto px-4 py-10">
+  <section class="relative overflow-hidden border border-zinc-800 bg-gradient-to-br from-zinc-950 via-zinc-900 to-black p-7 md:p-10">
+    <div class="absolute -right-10 -top-10 font-anton text-[180px] leading-none text-white/[0.025] select-none">FWR</div>
+    <p class="font-oswald text-xs tracking-[.35em] text-[#ffcc00]">FRENCH WRESTLING RÉVOLUTION • WWE 2K26</p>
+    <h1 class="mt-3 font-anton text-5xl md:text-7xl leading-none text-white">LE PANTHÉON <span class="text-[#ffcc00]">FWR</span></h1>
+    <p class="mt-4 max-w-2xl text-sm md:text-base text-zinc-400">Tous les titres, tous les règnes. Retrouvez les champions officiels de notre e-fed RP et les championnats actuellement vacants.</p>
+    <div class="mt-7 flex flex-wrap gap-3">
+      <div class="border border-zinc-700 bg-black/50 px-4 py-3"><div class="font-anton text-2xl text-white">17</div><div class="text-[10px] tracking-widest text-zinc-500">CHAMPIONNATS</div></div>
+      <div class="border border-zinc-700 bg-black/50 px-4 py-3"><div class="font-anton text-2xl text-red-300">4</div><div class="text-[10px] tracking-widest text-zinc-500">TITRES VACANTS</div></div>
+      <div class="border border-zinc-700 bg-black/50 px-4 py-3"><div class="font-anton text-2xl text-[#ffcc00]">WWE 2K26</div><div class="text-[10px] tracking-widest text-zinc-500">E-FED RP</div></div>
     </div>
-
-    <!-- FWR DARK CHAMPION -->
-    <div class="bg-zinc-900 border border-zinc-800 p-5 clip-bevel flex flex-col justify-between">
-      <div>
-        <div class="font-oswald text-xs text-[#ffcc00] tracking-widest">TITRE MAJEUR DARK</div>
-        <h3 class="font-anton text-2xl mt-1">FWR DARK CHAMPION</h3>
-        <div class="mt-4 space-y-2 text-sm text-zinc-300">
-          <div class="flex justify-between items-center border-b border-zinc-800 pb-2">
-            <span>Nico "Jefe" (Javier Fuentes)</span>
-            <span class="text-xs text-zinc-500">1x (120 Jours)</span>
-          </div>
-          <div class="flex justify-between items-center bg-zinc-800/50 p-2 rounded">
-            <span><strong>Cham</strong> (Black Ice)</span>
-            <span class="bg-[#ffcc00] text-black text-[10px] font-oswald px-2 py-0.5 clip-bevel">ACTUEL (99 Jours)</span>
-          </div>
-        </div>
-      </div>
+  </section>
+  <section class="mt-8 flex flex-col md:flex-row md:items-end justify-between gap-4">
+    <div><h2 class="font-anton text-3xl text-white">CHAMPIONS EN TITRE</h2><p class="mt-1 text-sm text-zinc-500">Statut et durée de règne communiqués par la FWR.</p></div>
+    <div class="flex flex-col sm:flex-row gap-2">
+      <input id="titleSearch" type="search" placeholder="Rechercher un titre ou un champion…" class="w-full sm:w-72 bg-zinc-900 border border-zinc-700 px-4 py-3 text-sm text-white outline-none focus:border-[#ffcc00]">
+      <select id="titleFilter" class="bg-zinc-900 border border-zinc-700 px-4 py-3 text-sm text-white outline-none focus:border-[#ffcc00]"><option value="all">Tous les statuts</option><option value="active">Champions en titre</option><option value="vacant">Titres vacants</option></select>
     </div>
-
-    <!-- FWR WORLD HEAVYWEIGHT -->
-    <div class="bg-zinc-900 border border-zinc-800 p-5 clip-bevel flex flex-col justify-between">
-      <div>
-        <div class="font-oswald text-xs text-[#ffcc00] tracking-widest">TITRE MONDIAL</div>
-        <h3 class="font-anton text-2xl mt-1">FWR WORLD HEAVYWEIGHT</h3>
-        <div class="mt-4 space-y-2 text-sm text-zinc-300">
-          <div class="flex justify-between items-center border-b border-zinc-800 pb-2">
-            <span>Crimson Death (Crimson Death)</span>
-            <span class="text-xs text-zinc-500">1x (21 Jours)</span>
-          </div>
-          <div class="flex justify-between items-center bg-zinc-800/50 p-2 rounded">
-            <span><strong>Ibrazim789000</strong> (Terry Walter)</span>
-            <span class="bg-[#ffcc00] text-black text-[10px] font-oswald px-2 py-0.5 clip-bevel">ACTUEL (99 Jours)</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- FWR DARK WORLD HEAVYWEIGHT -->
-    <div class="bg-zinc-900 border border-zinc-800 p-5 clip-bevel flex flex-col justify-between">
-      <div>
-        <div class="font-oswald text-xs text-[#ffcc00] tracking-widest">TITRE MONDIAL DARK</div>
-        <h3 class="font-anton text-2xl mt-1">FWR DARK WORLD HEAVYWEIGHT</h3>
-        <div class="mt-4 space-y-2 text-sm text-zinc-300">
-          <div class="flex justify-between items-center border-b border-zinc-800 pb-2">
-            <span>Cham (Enrique Fuentes)</span>
-            <span class="text-xs text-zinc-500">1x (50 Jours)</span>
-          </div>
-          <div class="flex justify-between items-center bg-zinc-800/50 p-2 rounded">
-            <span>Gokh4n_S4n (Andrew)</span>
-            <span class="text-xs text-zinc-500">1x (84 Jours)</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- FWR INTERCONTINENTAL CHAMPION -->
-    <div class="bg-zinc-900 border border-zinc-800 p-5 clip-bevel flex flex-col justify-between">
-      <div>
-        <div class="font-oswald text-xs text-[#ffcc00] tracking-widest">TITRE SECONDAIRE</div>
-        <h3 class="font-anton text-2xl mt-1">FWR INTERCONTINENTAL</h3>
-        <div class="mt-4 space-y-2 text-sm text-zinc-300">
-          <div class="flex justify-between items-center bg-zinc-800/50 p-2 rounded">
-            <span><strong>Far11.94</strong> (L'Olympien)</span>
-            <span class="bg-[#ffcc00] text-black text-[10px] font-oswald px-2 py-0.5 clip-bevel">ACTUEL (99 Jours)</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- FWR DARK INTERCONTINENTAL CHAMPION -->
-    <div class="bg-zinc-900 border border-zinc-800 p-5 clip-bevel flex flex-col justify-between">
-      <div>
-        <div class="font-oswald text-xs text-[#ffcc00] tracking-widest">TITRE SECONDAIRE DARK</div>
-        <h3 class="font-anton text-2xl mt-1">FWR DARK INTERCONTINENTAL</h3>
-        <div class="mt-4 space-y-2 text-sm text-zinc-300">
-          <div class="flex justify-between items-center border-b border-zinc-800 pb-2">
-            <span>Lolo | Tanaka (Lolo)</span>
-            <span class="text-xs text-zinc-500">1x (148 Jours)</span>
-          </div>
-          <div class="flex justify-between items-center bg-zinc-800/50 p-2 rounded">
-            <span><strong>Milo | KM SNN 🔵</strong> (Chester)</span>
-            <span class="bg-[#ffcc00] text-black text-[10px] font-oswald px-2 py-0.5 clip-bevel">ACTUEL (25 Jours)</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- FWR LEGACY CHAMPIONSHIP -->
-    <div class="bg-zinc-900 border border-zinc-800 p-5 clip-bevel flex flex-col justify-between">
-      <div>
-        <div class="font-oswald text-xs text-[#ffcc00] tracking-widest">TITRE LÉGACY</div>
-        <h3 class="font-anton text-2xl mt-1">FWR LEGACY</h3>
-        <div class="mt-4 space-y-2 text-sm text-zinc-300">
-          <div class="flex justify-between items-center border-b border-zinc-800 pb-2">
-            <span>Ben_- (Randy Orton)</span>
-            <span class="text-xs text-zinc-500">1x (9 Jours)</span>
-          </div>
-          <div class="flex justify-between items-center border-b border-zinc-800 pb-2">
-            <span>utilisateur-inconnu (Lorenzo)</span>
-            <span class="text-xs text-zinc-500">1x (104 Jours)</span>
-          </div>
-          <div class="flex justify-between items-center bg-zinc-800/50 p-2 rounded">
-            <span><strong>Mobi | The Dominator 💜</strong></span>
-            <span class="bg-[#ffcc00] text-black text-[10px] font-oswald px-2 py-0.5 clip-bevel">ACTUEL (174 Jours)</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- FWR DARK LEGACY CHAMPIONSHIP -->
-    <div class="bg-zinc-900 border border-zinc-800 p-5 clip-bevel flex flex-col justify-between">
-      <div>
-        <div class="font-oswald text-xs text-[#ffcc00] tracking-widest">TITRE LÉGACY DARK</div>
-        <h3 class="font-anton text-2xl mt-1">FWR DARK LEGACY</h3>
-        <div class="mt-4 space-y-2 text-sm text-zinc-300">
-          <div class="flex justify-between items-center border-b border-zinc-800 pb-2">
-            <span>YOVNGCHIMI (Delta 6)</span>
-            <span class="text-xs text-zinc-500">1x (46 Jours)</span>
-          </div>
-          <div class="flex justify-between items-center bg-zinc-800/50 p-2 rounded">
-            <span><strong>Demyris | Dboy</strong> (Seth Rollins)</span>
-            <span class="bg-[#ffcc00] text-black text-[10px] font-oswald px-2 py-0.5 clip-bevel">ACTUEL (94 Jours)</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- FWR TAG TEAM CHAMPIONS -->
-    <div class="bg-zinc-900 border border-zinc-800 p-5 clip-bevel flex flex-col justify-between">
-      <div>
-        <div class="font-oswald text-xs text-[#ffcc00] tracking-widest">TITRES PAR ÉQUIPE</div>
-        <h3 class="font-anton text-2xl mt-1">FWR TAG TEAM</h3>
-        <div class="mt-4 space-y-2 text-sm text-zinc-300">
-          <div class="flex justify-between items-center border-b border-zinc-800 pb-2">
-            <span>Nico "Jefe" &amp; xoSkeii</span>
-            <span class="text-xs text-zinc-500">1x (23 Jours)</span>
-          </div>
-          <div class="flex justify-between items-center border-b border-zinc-800 pb-2">
-            <span>T… (Ryoma) &amp; 𝒦𝓎𝓀𝓈 (Kujo)</span>
-            <span class="text-xs text-zinc-500">1x (67 Jours)</span>
-          </div>
-          <div class="flex justify-between items-center bg-zinc-800/50 p-2 rounded">
-            <span><strong>ᴛʙᴛ • 𝙋𝙚𝙥𝙞𝙩𝙤 &amp; 𝙝𝙖𝙩𝙞𝙢.</strong></span>
-            <span class="bg-[#ffcc00] text-black text-[10px] font-oswald px-2 py-0.5 clip-bevel">ACTUEL (62 Jours)</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- FWR DARK TAG TEAM CHAMPIONS -->
-    <div class="bg-zinc-900 border border-zinc-800 p-5 clip-bevel flex flex-col justify-between">
-      <div>
-        <div class="font-oswald text-xs text-[#ffcc00] tracking-widest">TITRES PAR ÉQUIPE DARK</div>
-        <h3 class="font-anton text-2xl mt-1">FWR DARK TAG TEAM</h3>
-        <div class="mt-4 space-y-2 text-sm text-zinc-300">
-          <div class="flex justify-between items-center border-b border-zinc-800 pb-2">
-            <span>Lolo &amp; Milo (Lolo &amp; Chester)</span>
-            <span class="text-xs text-zinc-500">1x (36 Jours)</span>
-          </div>
-          <div class="flex justify-between items-center border-b border-zinc-800 pb-2">
-            <span>Milo &amp; xoSkeii (Chester &amp; Taylor)</span>
-            <span class="text-xs text-zinc-500">2x (50 Jours)</span>
-          </div>
-          <div class="flex justify-between items-center bg-zinc-800/50 p-2 rounded">
-            <span><strong>UPSI &amp; xoSkeii</strong> (Lil Bandz)</span>
-            <span class="text-xs text-zinc-400">102 Jours</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- FWR WOMEN CHAMPION -->
-    <div class="bg-zinc-900 border border-zinc-800 p-5 clip-bevel flex flex-col justify-between">
-      <div>
-        <div class="font-oswald text-xs text-[#ffcc00] tracking-widest">TITRE FÉMININ</div>
-        <h3 class="font-anton text-2xl mt-1">FWR WOMEN</h3>
-        <div class="mt-4 space-y-2 text-sm text-zinc-300">
-          <div class="flex justify-between items-center border-b border-zinc-800 pb-2">
-            <span>Nokomi (Yuri)</span>
-            <span class="text-xs text-zinc-500">1x (80 Jours)</span>
-          </div>
-          <div class="flex justify-between items-center bg-zinc-800/50 p-2 rounded">
-            <span><strong>isa"freakin"face</strong> (Mariana)</span>
-            <span class="bg-[#ffcc00] text-black text-[10px] font-oswald px-2 py-0.5 clip-bevel">ACTUEL (17 Jours)</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- FWR DARK WOMEN CHAMPION -->
-    <div class="bg-zinc-900 border border-zinc-800 p-5 clip-bevel flex flex-col justify-between">
-      <div>
-        <div class="font-oswald text-xs text-[#ffcc00] tracking-widest">TITRE FÉMININ DARK</div>
-        <h3 class="font-anton text-2xl mt-1">FWR DARK WOMEN</h3>
-        <div class="mt-4 space-y-2 text-sm text-zinc-300">
-          <div class="flex justify-between items-center border-b border-zinc-800 pb-2">
-            <span>Gokh4n_S4n (Rumi)</span>
-            <span class="text-xs text-zinc-500">1x (29 Jours)</span>
-          </div>
-          <div class="flex justify-between items-center border-b border-zinc-800 pb-2">
-            <span>Milo | KM SNN 🔵 (Anaïs Fuentes)</span>
-            <span class="text-xs text-zinc-500">1x (86 Jours)</span>
-          </div>
-          <div class="flex justify-between items-center bg-zinc-800/50 p-2 rounded">
-            <span><strong>Lolo | Tanaka</strong></span>
-            <span class="bg-[#ffcc00] text-black text-[10px] font-oswald px-2 py-0.5 clip-bevel">ACTUEL (119 Jours)</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- FWR WOMEN'S TAG TEAM CHAMPIONS -->
-    <div class="bg-zinc-900 border border-zinc-800 p-5 clip-bevel flex flex-col justify-between">
-      <div>
-        <div class="font-oswald text-xs text-[#ffcc00] tracking-widest">ÉQUIPES FÉMININES</div>
-        <h3 class="font-anton text-2xl mt-1">FWR WOMEN'S TAG TEAM</h3>
-        <div class="mt-4 space-y-2 text-sm text-zinc-300">
-          <div class="flex justify-between items-center border-b border-zinc-800 pb-2">
-            <span>𝒦𝓎𝓀𝓈_𝒷𝒶𝓁ℴ𝓇 &amp; Valentino (Aurora &amp; Crystal)</span>
-            <span class="text-xs text-zinc-500">1x (244 Jours)</span>
-          </div>
-          <div class="flex justify-between items-center bg-zinc-800/50 p-2 rounded">
-            <span><strong>T… (Julia) &amp; Tatsu (Nova)</strong></span>
-            <span class="bg-[#ffcc00] text-black text-[10px] font-oswald px-2 py-0.5 clip-bevel">ACTUEL (10 Jours)</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- FWR DARK WOMEN'S TAG TEAM CHAMPIONS -->
-    <div class="bg-zinc-900 border border-zinc-800 p-5 clip-bevel flex flex-col justify-between">
-      <div>
-        <div class="font-oswald text-xs text-[#ffcc00] tracking-widest">ÉQUIPES FÉMININES DARK</div>
-        <h3 class="font-anton text-2xl mt-1">FWR DARK WOMEN'S TAG</h3>
-        <div class="mt-4 space-y-2 text-sm text-zinc-300">
-          <div class="flex justify-between items-center border-b border-zinc-800 pb-2">
-            <span>Nico "Jefe" &amp; Cham (Delia &amp; Luana)</span>
-            <span class="text-xs text-zinc-500">1x (53 Jours)</span>
-          </div>
-          <div class="flex justify-between items-center border-b border-zinc-800 pb-2">
-            <span>Nico "Jefe" &amp; Cham (Shotzi &amp; Paige)</span>
-            <span class="text-xs text-zinc-500">2x (122 Jours)</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- FWR AMAZON CHAMPION -->
-    <div class="bg-zinc-900 border border-zinc-800 p-5 clip-bevel flex flex-col justify-between">
-      <div>
-        <div class="font-oswald text-xs text-[#ffcc00] tracking-widest">TITRE AMAZON</div>
-        <h3 class="font-anton text-2xl mt-1">FWR AMAZON</h3>
-        <div class="mt-4 space-y-2 text-sm text-zinc-300">
-          <div class="flex justify-between items-center bg-zinc-800/50 p-2 rounded">
-            <span><strong>UPSI</strong> (Titia)</span>
-            <span class="bg-[#ffcc00] text-black text-[10px] font-oswald px-2 py-0.5 clip-bevel">ACTUEL (17 Jours)</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- FWR DARK VALKYRIE CHAMPION -->
-    <div class="bg-zinc-900 border border-zinc-800 p-5 clip-bevel flex flex-col justify-between">
-      <div>
-        <div class="font-oswald text-xs text-[#ffcc00] tracking-widest">TITRE VALKYRIE DARK</div>
-        <h3 class="font-anton text-2xl mt-1">FWR DARK VALKYRIE</h3>
-        <div class="mt-4 space-y-2 text-sm text-zinc-300">
-          <div class="flex justify-between items-center bg-zinc-800/50 p-2 rounded">
-            <span><strong>Scarlett/Jenova Mack</strong> (Scarlett)</span>
-            <span class="bg-[#ffcc00] text-black text-[10px] font-oswald px-2 py-0.5 clip-bevel">ACTUEL (17 Jours)</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- REVOLUTION IN THE BANK PS5 -->
-    <div class="bg-zinc-900 border border-zinc-800 p-5 clip-bevel flex flex-col justify-between">
-      <div>
-        <div class="font-oswald text-xs text-[#00aaff] tracking-widest">MALLETTE MITB</div>
-        <h3 class="font-anton text-2xl mt-1">REVOLUTION IN THE BANK PS5</h3>
-        <div class="mt-4 space-y-2 text-sm text-zinc-300">
-          <div class="flex justify-between items-center border-b border-zinc-800 pb-2">
-            <span>ƵΛŦ$Ʊ/Blake Damon♠️ (Shawn Michaels)</span>
-            <span class="text-xs text-zinc-500">1x (52 Jours)</span>
-          </div>
-          <div class="flex justify-between items-center border-b border-zinc-800 pb-2">
-            <span>Ibrazim789000 (Terry Walter)</span>
-            <span class="text-xs text-zinc-500">1x (39 Jours)</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
+  </section>
+  <div id="titleGrid" class="mt-5 grid sm:grid-cols-2 xl:grid-cols-3 gap-4">
+    <article data-title="fwr champion" data-champ="eazy-e" class="title-card group relative overflow-hidden bg-zinc-950 border border-zinc-800 p-5 transition duration-200 hover:-translate-y-1 hover:border-[#ffcc00]/70">
+      <div class="absolute left-0 top-0 h-1 w-full bg-[#ffcc00]"></div>
+      <div class="flex items-start justify-between gap-3"><span class="text-[10px] font-bold tracking-[.22em] text-[#ffcc00]">TITRE MAJEUR</span><span class="text-xs text-zinc-400">97 jours de règne</span></div>
+      <h2 class="mt-3 font-anton text-xl leading-tight text-zinc-100">FWR CHAMPION</h2>
+      <div class="mt-5 text-2xl md:text-3xl font-anton text-white">Eazy-E</div><p class="mt-1 text-sm text-zinc-400">Champion en titre</p>
+    </article><article data-title="fwr dark champion" data-champ="black ice" class="title-card group relative overflow-hidden bg-zinc-950 border border-zinc-800 p-5 transition duration-200 hover:-translate-y-1 hover:border-[#ffcc00]/70">
+      <div class="absolute left-0 top-0 h-1 w-full bg-[#ffcc00]"></div>
+      <div class="flex items-start justify-between gap-3"><span class="text-[10px] font-bold tracking-[.22em] text-[#ffcc00]">TITRE MAJEUR DARK</span><span class="text-xs text-zinc-400">134 jours de règne</span></div>
+      <h2 class="mt-3 font-anton text-xl leading-tight text-zinc-100">FWR DARK CHAMPION</h2>
+      <div class="mt-5 text-2xl md:text-3xl font-anton text-white">Black Ice</div><p class="mt-1 text-sm text-zinc-400">Champion en titre</p>
+    </article><article data-title="fwr world heavyweight" data-champ="terry walter" class="title-card group relative overflow-hidden bg-zinc-950 border border-zinc-800 p-5 transition duration-200 hover:-translate-y-1 hover:border-[#ffcc00]/70">
+      <div class="absolute left-0 top-0 h-1 w-full bg-[#ffcc00]"></div>
+      <div class="flex items-start justify-between gap-3"><span class="text-[10px] font-bold tracking-[.22em] text-[#ffcc00]">MONDIAL</span><span class="text-xs text-zinc-400">134 jours de règne</span></div>
+      <h2 class="mt-3 font-anton text-xl leading-tight text-zinc-100">FWR WORLD HEAVYWEIGHT</h2>
+      <div class="mt-5 text-2xl md:text-3xl font-anton text-white">Terry Walter</div><p class="mt-1 text-sm text-zinc-400">Champion en titre</p>
+    </article><article data-title="fwr dark world heavyweight" data-champ="vacant" class="title-card group relative overflow-hidden bg-zinc-950 border border-red-900/70 p-5 transition duration-200 hover:-translate-y-1 hover:border-[#ffcc00]/70">
+      <div class="absolute left-0 top-0 h-1 w-full bg-red-500"></div>
+      <div class="flex items-start justify-between gap-3"><span class="text-[10px] font-bold tracking-[.22em] text-[#ffcc00]">MONDIAL DARK</span><span class="inline-flex items-center gap-2 text-xs font-bold tracking-wider text-red-300"><span class="w-2 h-2 rounded-full bg-red-400"></span>VACANT</span></div>
+      <h2 class="mt-3 font-anton text-xl leading-tight text-zinc-100">FWR DARK WORLD HEAVYWEIGHT</h2>
+      <div class="mt-5 text-2xl font-anton text-red-300">POSTE VACANT</div><p class="mt-1 text-sm text-zinc-500">Le titre attend son prochain détenteur.</p>
+    </article><article data-title="fwr intercontinental champion" data-champ="l’olympien" class="title-card group relative overflow-hidden bg-zinc-950 border border-zinc-800 p-5 transition duration-200 hover:-translate-y-1 hover:border-[#ffcc00]/70">
+      <div class="absolute left-0 top-0 h-1 w-full bg-[#ffcc00]"></div>
+      <div class="flex items-start justify-between gap-3"><span class="text-[10px] font-bold tracking-[.22em] text-[#ffcc00]">INTERCONTINENTAL</span><span class="text-xs text-zinc-400">134 jours de règne</span></div>
+      <h2 class="mt-3 font-anton text-xl leading-tight text-zinc-100">FWR INTERCONTINENTAL CHAMPION</h2>
+      <div class="mt-5 text-2xl md:text-3xl font-anton text-white">L’Olympien</div><p class="mt-1 text-sm text-zinc-400">Champion en titre</p>
+    </article><article data-title="fwr dark intercontinental champion" data-champ="chester" class="title-card group relative overflow-hidden bg-zinc-950 border border-zinc-800 p-5 transition duration-200 hover:-translate-y-1 hover:border-[#ffcc00]/70">
+      <div class="absolute left-0 top-0 h-1 w-full bg-[#ffcc00]"></div>
+      <div class="flex items-start justify-between gap-3"><span class="text-[10px] font-bold tracking-[.22em] text-[#ffcc00]">INTERCONTINENTAL DARK</span><span class="text-xs text-zinc-400">60 jours de règne</span></div>
+      <h2 class="mt-3 font-anton text-xl leading-tight text-zinc-100">FWR DARK INTERCONTINENTAL CHAMPION</h2>
+      <div class="mt-5 text-2xl md:text-3xl font-anton text-white">Chester</div><p class="mt-1 text-sm text-zinc-400">Champion en titre</p>
+    </article><article data-title="fwr legacy championship" data-champ="the dominator" class="title-card group relative overflow-hidden bg-zinc-950 border border-zinc-800 p-5 transition duration-200 hover:-translate-y-1 hover:border-[#ffcc00]/70">
+      <div class="absolute left-0 top-0 h-1 w-full bg-[#ffcc00]"></div>
+      <div class="flex items-start justify-between gap-3"><span class="text-[10px] font-bold tracking-[.22em] text-[#ffcc00]">LEGACY</span><span class="text-xs text-zinc-400">209 jours de règne</span></div>
+      <h2 class="mt-3 font-anton text-xl leading-tight text-zinc-100">FWR LEGACY CHAMPIONSHIP</h2>
+      <div class="mt-5 text-2xl md:text-3xl font-anton text-white">The Dominator</div><p class="mt-1 text-sm text-zinc-400">Champion en titre</p>
+    </article><article data-title="fwr dark legacy championship" data-champ="seth rollins" class="title-card group relative overflow-hidden bg-zinc-950 border border-zinc-800 p-5 transition duration-200 hover:-translate-y-1 hover:border-[#ffcc00]/70">
+      <div class="absolute left-0 top-0 h-1 w-full bg-[#ffcc00]"></div>
+      <div class="flex items-start justify-between gap-3"><span class="text-[10px] font-bold tracking-[.22em] text-[#ffcc00]">LEGACY DARK</span><span class="text-xs text-zinc-400">129 jours de règne</span></div>
+      <h2 class="mt-3 font-anton text-xl leading-tight text-zinc-100">FWR DARK LEGACY CHAMPIONSHIP</h2>
+      <div class="mt-5 text-2xl md:text-3xl font-anton text-white">Seth Rollins</div><p class="mt-1 text-sm text-zinc-400">Champion en titre</p>
+    </article><article data-title="fwr women champion" data-champ="mariana" class="title-card group relative overflow-hidden bg-zinc-950 border border-zinc-800 p-5 transition duration-200 hover:-translate-y-1 hover:border-[#ffcc00]/70">
+      <div class="absolute left-0 top-0 h-1 w-full bg-[#ffcc00]"></div>
+      <div class="flex items-start justify-between gap-3"><span class="text-[10px] font-bold tracking-[.22em] text-[#ffcc00]">FÉMININ</span><span class="text-xs text-zinc-400">52 jours de règne</span></div>
+      <h2 class="mt-3 font-anton text-xl leading-tight text-zinc-100">FWR WOMEN CHAMPION</h2>
+      <div class="mt-5 text-2xl md:text-3xl font-anton text-white">Mariana</div><p class="mt-1 text-sm text-zinc-400">Champion en titre</p>
+    </article><article data-title="fwr dark women champion" data-champ="tanaka" class="title-card group relative overflow-hidden bg-zinc-950 border border-zinc-800 p-5 transition duration-200 hover:-translate-y-1 hover:border-[#ffcc00]/70">
+      <div class="absolute left-0 top-0 h-1 w-full bg-[#ffcc00]"></div>
+      <div class="flex items-start justify-between gap-3"><span class="text-[10px] font-bold tracking-[.22em] text-[#ffcc00]">FÉMININ DARK</span><span class="text-xs text-zinc-400">154 jours de règne</span></div>
+      <h2 class="mt-3 font-anton text-xl leading-tight text-zinc-100">FWR DARK WOMEN CHAMPION</h2>
+      <div class="mt-5 text-2xl md:text-3xl font-anton text-white">Tanaka</div><p class="mt-1 text-sm text-zinc-400">Champion en titre</p>
+    </article><article data-title="fwr amazon champion" data-champ="titia" class="title-card group relative overflow-hidden bg-zinc-950 border border-zinc-800 p-5 transition duration-200 hover:-translate-y-1 hover:border-[#ffcc00]/70">
+      <div class="absolute left-0 top-0 h-1 w-full bg-[#ffcc00]"></div>
+      <div class="flex items-start justify-between gap-3"><span class="text-[10px] font-bold tracking-[.22em] text-[#ffcc00]">AMAZON</span><span class="text-xs text-zinc-400">52 jours de règne</span></div>
+      <h2 class="mt-3 font-anton text-xl leading-tight text-zinc-100">FWR AMAZON CHAMPION</h2>
+      <div class="mt-5 text-2xl md:text-3xl font-anton text-white">Titia</div><p class="mt-1 text-sm text-zinc-400">Champion en titre</p>
+    </article><article data-title="fwr dark valkyrie champion" data-champ="scarlett" class="title-card group relative overflow-hidden bg-zinc-950 border border-zinc-800 p-5 transition duration-200 hover:-translate-y-1 hover:border-[#ffcc00]/70">
+      <div class="absolute left-0 top-0 h-1 w-full bg-[#ffcc00]"></div>
+      <div class="flex items-start justify-between gap-3"><span class="text-[10px] font-bold tracking-[.22em] text-[#ffcc00]">VALKYRIE DARK</span><span class="text-xs text-zinc-400">52 jours de règne</span></div>
+      <h2 class="mt-3 font-anton text-xl leading-tight text-zinc-100">FWR DARK VALKYRIE CHAMPION</h2>
+      <div class="mt-5 text-2xl md:text-3xl font-anton text-white">Scarlett</div><p class="mt-1 text-sm text-zinc-400">Champion en titre</p>
+    </article><article data-title="fwr tag team champions" data-champ="zayden blaze & kyron blaze" class="title-card group relative overflow-hidden bg-zinc-950 border border-zinc-800 p-5 transition duration-200 hover:-translate-y-1 hover:border-[#ffcc00]/70">
+      <div class="absolute left-0 top-0 h-1 w-full bg-[#ffcc00]"></div>
+      <div class="flex items-start justify-between gap-3"><span class="text-[10px] font-bold tracking-[.22em] text-[#ffcc00]">ÉQUIPE</span><span class="text-xs text-zinc-400">97 jours de règne</span></div>
+      <h2 class="mt-3 font-anton text-xl leading-tight text-zinc-100">FWR TAG TEAM CHAMPIONS</h2>
+      <div class="mt-5 text-2xl md:text-3xl font-anton text-white">Zayden Blaze & Kyron Blaze</div><p class="mt-1 text-sm text-zinc-400">Champions en titre</p>
+    </article><article data-title="fwr dark tag team champions" data-champ="vacant" class="title-card group relative overflow-hidden bg-zinc-950 border border-red-900/70 p-5 transition duration-200 hover:-translate-y-1 hover:border-[#ffcc00]/70">
+      <div class="absolute left-0 top-0 h-1 w-full bg-red-500"></div>
+      <div class="flex items-start justify-between gap-3"><span class="text-[10px] font-bold tracking-[.22em] text-[#ffcc00]">ÉQUIPE DARK</span><span class="inline-flex items-center gap-2 text-xs font-bold tracking-wider text-red-300"><span class="w-2 h-2 rounded-full bg-red-400"></span>VACANT</span></div>
+      <h2 class="mt-3 font-anton text-xl leading-tight text-zinc-100">FWR DARK TAG TEAM CHAMPIONS</h2>
+      <div class="mt-5 text-2xl font-anton text-red-300">POSTE VACANT</div><p class="mt-1 text-sm text-zinc-500">Le titre attend son prochain détenteur.</p>
+    </article><article data-title="fwr women’s tag team champions" data-champ="julia & nova riptide" class="title-card group relative overflow-hidden bg-zinc-950 border border-zinc-800 p-5 transition duration-200 hover:-translate-y-1 hover:border-[#ffcc00]/70">
+      <div class="absolute left-0 top-0 h-1 w-full bg-[#ffcc00]"></div>
+      <div class="flex items-start justify-between gap-3"><span class="text-[10px] font-bold tracking-[.22em] text-[#ffcc00]">ÉQUIPE FÉMININE</span><span class="text-xs text-zinc-400">45 jours de règne</span></div>
+      <h2 class="mt-3 font-anton text-xl leading-tight text-zinc-100">FWR WOMEN’S TAG TEAM CHAMPIONS</h2>
+      <div class="mt-5 text-2xl md:text-3xl font-anton text-white">Julia & Nova Riptide</div><p class="mt-1 text-sm text-zinc-400">Champions en titre</p>
+    </article><article data-title="fwr dark women’s tag team champions" data-champ="vacant" class="title-card group relative overflow-hidden bg-zinc-950 border border-red-900/70 p-5 transition duration-200 hover:-translate-y-1 hover:border-[#ffcc00]/70">
+      <div class="absolute left-0 top-0 h-1 w-full bg-red-500"></div>
+      <div class="flex items-start justify-between gap-3"><span class="text-[10px] font-bold tracking-[.22em] text-[#ffcc00]">ÉQUIPE FÉMININE DARK</span><span class="inline-flex items-center gap-2 text-xs font-bold tracking-wider text-red-300"><span class="w-2 h-2 rounded-full bg-red-400"></span>VACANT</span></div>
+      <h2 class="mt-3 font-anton text-xl leading-tight text-zinc-100">FWR DARK WOMEN’S TAG TEAM CHAMPIONS</h2>
+      <div class="mt-5 text-2xl font-anton text-red-300">POSTE VACANT</div><p class="mt-1 text-sm text-zinc-500">Le titre attend son prochain détenteur.</p>
+    </article><article data-title="revolution in the bank" data-champ="vacant" class="title-card group relative overflow-hidden bg-zinc-950 border border-red-900/70 p-5 transition duration-200 hover:-translate-y-1 hover:border-[#ffcc00]/70">
+      <div class="absolute left-0 top-0 h-1 w-full bg-red-500"></div>
+      <div class="flex items-start justify-between gap-3"><span class="text-[10px] font-bold tracking-[.22em] text-[#ffcc00]">CONTRAT</span><span class="inline-flex items-center gap-2 text-xs font-bold tracking-wider text-red-300"><span class="w-2 h-2 rounded-full bg-red-400"></span>VACANT</span></div>
+      <h2 class="mt-3 font-anton text-xl leading-tight text-zinc-100">REVOLUTION IN THE BANK</h2>
+      <div class="mt-5 text-2xl font-anton text-red-300">POSTE VACANT</div><p class="mt-1 text-sm text-zinc-500">Le titre attend son prochain détenteur.</p>
+    </article>
   </div>
+  <p id="noResults" class="hidden py-12 text-center text-zinc-500">Aucun championnat ne correspond à cette recherche.</p>
+  <div class="mt-8 border-l-2 border-[#ffcc00] bg-zinc-900/60 p-4 text-sm text-zinc-400">Les durées de règne sont affichées selon les informations fournies. Les championnats vacants sont signalés en rouge.</div>
 </main>
+<script>
+(function(){
+ const search=document.getElementById('titleSearch'), filter=document.getElementById('titleFilter');
+ const cards=[...document.querySelectorAll('.title-card')], empty=document.getElementById('noResults');
+ function update(){
+   const q=search.value.trim().toLowerCase(), f=filter.value; let shown=0;
+   cards.forEach(card=>{const vacant=card.dataset.champ==='vacant';const match=(!q||(card.dataset.title+' '+card.dataset.champ).includes(q))&&(f==='all'||(f==='vacant'&&vacant)||(f==='active'&&!vacant));card.classList.toggle('hidden',!match);if(match)shown++;});
+   empty.classList.toggle('hidden',shown>0);
+ }
+ search.addEventListener('input',update);filter.addEventListener('change',update);
+})();
+</script>
 
 <footer class="mt-20 border-t border-zinc-800 bg-black">
   <div class="max-w-7xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-8">
